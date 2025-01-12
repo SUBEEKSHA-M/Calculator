@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cal.css">
     <title>Calculator and Aptitude Questions</title>
 </head>
 <body>
     <div id="container">
+        <!-- Aptitude Questions Section -->
+        <div id="aptitude">
+            <h2>Aptitude Questions</h2>
+            <ol>
+                <li>What is the sum of the first 10 natural numbers?</li>
+                <li>If a train is moving at 60 km/hr, how far will it travel in 2 hours?</li>
+                <li>Find the next number in the series: 2, 4, 8, 16, ...?</li>
+                <li>If 15% of a number is 45, what is the number?</li>
+                <li>A man walks 3 km east, then 4 km north. How far is he from his starting point?</li>
+            </ol>
+        </div>
+
         <!-- Calculator Section -->
         <div id="calculator">
             <h1 id="title"><center>Calculator</center></h1>
@@ -37,60 +49,8 @@
                 </form>
             </div>
         </div>
-
-        <!-- Aptitude Section -->
-        <div id="aptitude">
-            <h2>Aptitude Questions</h2>
-            <ol>
-                <li>What is the sum of the first 10 natural numbers?</li>
-                <li>If a train is moving at 60 km/hr, how far will it travel in 2 hours?</li>
-                <li>Find the next number in the series: 2, 4, 8, 16, ...?</li>
-                <li>If 15% of a number is 45, what is the number?</li>
-                <li>A man walks 3 km east, then 4 km north. How far is he from his starting point?</li>
-            </ol>
-        </div>
     </div>
-    
-    <script>
-        function add() {
-            var a = f.cal.value;
-            var last = a.charAt(a.length - 1);
-            if (['+', '-', '*', '/'].includes(last)) {
-                f.cal.value = a.slice(0, -1) + '+';
-            } else {
-                f.cal.value += '+';
-            }
-        }
 
-        function sub() {
-            var a = f.cal.value;
-            var last = a.charAt(a.length - 1);
-            if (['+', '-', '*', '/'].includes(last)) {
-                f.cal.value = a.slice(0, -1) + '-';
-            } else {
-                f.cal.value += '-';
-            }
-        }
-
-        function div() {
-            var a = f.cal.value;
-            var last = a.charAt(a.length - 1);
-            if (['+', '-', '*', '/'].includes(last)) {
-                f.cal.value = a.slice(0, -1) + '/';
-            } else {
-                f.cal.value += '/';
-            }
-        }
-
-        function mul() {
-            var a = f.cal.value;
-            var last = a.charAt(a.length - 1);
-            if (['+', '-', '*', '/'].includes(last)) {
-                f.cal.value = a.slice(0, -1) + '*';
-            } else {
-                f.cal.value += '*';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
