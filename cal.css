@@ -1,4 +1,3 @@
-/* General Page Styles */
 body {
     margin: 0;
     padding: 0;
@@ -11,12 +10,12 @@ body {
 }
 
 #container {
-    display: flex; /* Side-by-side layout */
-    flex-direction: row; /* Left-to-right alignment */
+    display: flex; 
+    flex-direction: row; 
     justify-content: space-between;
-    align-items: flex-start; /* Align sections at the top */
-    width: 80%; /* Container width */
-    gap: 20px; /* Space between sections */
+    align-items: flex-start; 
+    width: 80%; 
+    gap: 20px; 
 }
 
 /* Aptitude Questions Section */
@@ -25,8 +24,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 2; /* Larger width for questions */
-    max-width: 60%; /* Prevent excessive width */
+    flex: 2; 
+    max-width: 60%; 
 }
 
 #aptitude h2 {
@@ -49,8 +48,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 1; /* Smaller width for the calculator */
-    max-width: 35%; /* Prevent excessive width */
+    flex: 1; 
+    max-width: 35%; 
 }
 
 #main {
