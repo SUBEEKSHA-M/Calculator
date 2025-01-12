@@ -4,52 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cal.css">
-    <title>Calculator and Aptitude Questions</title>
+    <title>Aptitude</title>
 </head>
 <body>
     <div id="container">
-        <!-- Aptitude Questions Section -->
-        <div id="aptitude">
-            <h2>Aptitude Questions</h2>
-            <ol>
-                <li>What is the sum of the first 10 natural numbers?</li>
-                <li>If a train is moving at 60 km/hr, how far will it travel in 2 hours?</li>
-                <li>Find the next number in the series: 2, 4, 8, 16, ...?</li>
-                <li>If 15% of a number is 45, what is the number?</li>
-                <li>A man walks 3 km east, then 4 km north. How far is he from his starting point?</li>
-            </ol>
+        <!--Attendee Information -->
+        <div id="page1" class="page">
+            <h1>Attendee Information</h1>
+            <form id="attendeeForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <button type="button" onclick="goToPage2()">Next</button>
+            </form>
+            <div id="created-by">
+                <p>Created by: <strong>Subeeksha M</strong></p>
+            </div>
         </div>
 
-        <!-- Calculator Section -->
-        <div id="calculator">
-            <h1 id="title"><center>Calculator</center></h1>
-            <div id="main">
-                <form name="f">
-                    <input type="text" name="cal" placeholder="0" id="id"> <br>
-                    <input type="button" value="1" onclick="f.cal.value+=1">
-                    <input type="button" value="2" onclick="f.cal.value+=2">
-                    <input type="button" value="3" onclick="f.cal.value+=3">
-                    <input type="button" value="+" onclick="add()">
-                    <br>
-                    <input type="button" value="4" onclick="f.cal.value+=4">
-                    <input type="button" value="5" onclick="f.cal.value+=5">
-                    <input type="button" value="6" onclick="f.cal.value+=6">
-                    <input type="button" value="-" onclick="sub()">
-                    <br>
-                    <input type="button" value="7" onclick="f.cal.value+=7">
-                    <input type="button" value="8" onclick="f.cal.value+=8">
-                    <input type="button" value="9" onclick="f.cal.value+=9">
-                    <input type="button" value="/" onclick="div()">
-                    <br>
-                    <input type="button" value="c" onclick="f.cal.value=''">
-                    <input type="button" value="0" onclick="f.cal.value+=0">
-                    <input type="button" value="=" onclick="f.cal.value=eval(f.cal.value)">
-                    <input type="button" value="x" onclick="mul()">
-                    <br>
-                </form>
+        <!-- Second Page: Calculator and Questions -->
+        <div id="page2" class="page" style="display: none;">
+            <div id="aptitude">
+                <h2>Aptitude Questions</h2>
+                <ol>
+                    <li>What is the sum of the first 10 natural numbers?</li>
+                    <li>If a train is moving at 60 km/hr, how far will it travel in 2 hours?</li>
+                    <li>Find the next number in the series: 2, 4, 8, 16, ...?</li>
+                    <li>If 15% of a number is 45, what is the number?</li>
+                    <li>A man walks 3 km east, then 4 km north. How far is he from his starting point?</li>
+                </ol>
+            </div>
+            <div id="calculator">
+                <h1 id="title"><center>Calculator</center></h1>
+                <div id="main">
+                    <form name="f">
+                        <input type="text" name="cal" placeholder="0" id="id"> <br>
+                        <input type="button" value="1" onclick="f.cal.value+=1">
+                        <input type="button" value="2" onclick="f.cal.value+=2">
+                        <input type="button" value="3" onclick="f.cal.value+=3">
+                        <input type="button" value="+" onclick="add()">
+                        <br>
+                        <input type="button" value="4" onclick="f.cal.value+=4">
+                        <input type="button" value="5" onclick="f.cal.value+=5">
+                        <input type="button" value="6" onclick="f.cal.value+=6">
+                        <input type="button" value="-" onclick="sub()">
+                        <br>
+                        <input type="button" value="7" onclick="f.cal.value+=7">
+                        <input type="button" value="8" onclick="f.cal.value+=8">
+                        <input type="button" value="9" onclick="f.cal.value+=9">
+                        <input type="button" value="/" onclick="div()">
+                        <br>
+                        <input type="button" value="c" onclick="f.cal.value=''">
+                        <input type="button" value="0" onclick="f.cal.value+=0">
+                        <input type="button" value="=" onclick="f.cal.value=eval(f.cal.value)">
+                        <input type="button" value="x" onclick="mul()">
+                        <br>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
