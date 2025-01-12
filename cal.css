@@ -2,23 +2,73 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
-    background-color: #788999;
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
 
 #container {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: flex-start; 
-    width: 80%; 
-    gap: 20px; 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Aptitude Questions Section */
+.page {
+    width: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"], input[type="email"] {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#created-by {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
 #aptitude {
     background-color: #fff3e0;
     padding: 20px;
@@ -26,6 +76,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 2; 
     max-width: 60%; 
+    margin-right: 20px; 
 }
 
 #aptitude h2 {
@@ -42,7 +93,6 @@ body {
     line-height: 1.6;
 }
 
-/* Calculator Section */
 #calculator {
     background-color: #e0f7fa;
     padding: 20px;
@@ -50,6 +100,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1; 
     max-width: 35%; 
+}
+
+#container {
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: row; 
 }
 
 #main {
@@ -73,4 +129,49 @@ input {
 #title {
     color: #333;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #aptitude {
+        max-width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    #calculator {
+        max-width: 90%;
+    }
+    
+    #container {
+        padding: 15px;
+    }
+    
+    input[type="text"], input[type="email"] {
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #aptitude {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    #calculator {
+        max-width: 100%;
+    }
+    #created-by {
+        font-size: 12px;
+    }
+    footer {
+        font-size: 12px;
+    }
 }

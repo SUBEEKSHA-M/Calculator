@@ -1,3 +1,19 @@
+function goToPage2() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    // Check if fields are filled
+    if (!name || !email) {
+        alert("Please fill in your name and email.");
+        return;
+    }
+
+    // Show page 2 and hide page 1
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "flex";
+}
+
+// Calculator Functions
 function add() {
     var a = f.cal.value;
     var last = a.charAt(a.length - 1);
